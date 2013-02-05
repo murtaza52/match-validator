@@ -9,29 +9,29 @@ rel="stylesheet">
 There is often a need for comparing the equality of input fields such as
 email address or passwords.
 
-### Sample Form
+<!-- ### Sample Form -->
 
-<form name="form" class="form-horizontal">
-        <div class="control-group">
-          <label class="control-label">User Name</label>
-          <div class="controls">
-            <input type="text" name="user" placeholder="User Name"/>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label">Password</label>
-          <div class="controls">
-            <input type="password" name="password" placeholder="Password"/>
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label">Confirm Password</label>
-          <div class="controls">
-            <input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/>
-            <label ng-show="form.confirm_password.$error.passMatch"
-        class="help-inline required">Passwords do not match!</label>
-          </div>
-        </div>
+<!-- <form name="form" class="form-horizontal"> -->
+<!--         <div class="control-group"> -->
+<!--           <label class="control-label">User Name</label> -->
+<!--           <div class="controls"> -->
+<!--             <input type="text" name="user" placeholder="User Name"/> -->
+<!--           </div> -->
+<!--         </div> -->
+<!--         <div class="control-group"> -->
+<!--           <label class="control-label">Password</label> -->
+<!--           <div class="controls"> -->
+<!--             <input type="password" name="password" placeholder="Password"/> -->
+<!--           </div> -->
+<!--         </div> -->
+<!--         <div class="control-group"> -->
+<!--           <label class="control-label">Confirm Password</label> -->
+<!--           <div class="controls"> -->
+<!--             <input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/> -->
+<!--             <label ng-show="form.confirm_password.$error.passMatch" -->
+<!--         class="help-inline required">Passwords do not match!</label> -->
+<!--           </div> -->
+<!--         </div> -->
 
 
 
@@ -76,10 +76,12 @@ checked using - `form.$invalid`
 - Change the passing of JSON string to object, as that necessiates
   eval. I am using jade which has trouble with the object notation, thus
   the stopgap.
+- Add a working example on the readme.
+- Get literate programming working !
 
 ### Credits -
 
-- This is the post that implements a similar direcitve and provided the [idea] - (http://jsfiddle.net/thomporter/UZrex/1/)
+- This is the post that implements a similar direcitve and provided the [idea] (http://jsfiddle.net/thomporter/UZrex/1/)
 - The google group discussion that explained the concept of [$parsers] (https://groups.google.com/d/msg/angular/cvHU-AUOP4U/wDahiSxuljIJ)
 
 
