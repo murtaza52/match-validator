@@ -39,18 +39,15 @@ email address or passwords.
 
 ```html
 <form name="form">
+  <label class="control-label">User Name</label>
+  <input type="text" name="user" placeholder="User Name"/>
 
-          <label class="control-label">User Name</label>
-          <input type="text" name="user" placeholder="User Name"/>
+  <label class="control-label">Password</label>
+  <input type="password" name="password" placeholder="Password"/>
 
-         <label class="control-label">Password</label>
-            <input type="password" name="password"
-            placeholder="Password"/>
-
-          <label class="control-label">Confirm Password</label>
-<input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/>
-            <label ng-show="form.confirm_password.$error.passMatch"
-            class="help-inline required">Passwords do not match!</label>
+  <label class="control-label">Confirm Password</label>
+  <input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/>
+  <label ng-show="form.confirm_password.$error.passMatch" class="help-inline required">Passwords do not match!</label>
 ```
 ***
 
