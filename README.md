@@ -51,7 +51,7 @@ email address or passwords.
 <input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/>
             <label ng-show="form.confirm_password.$error.passMatch"
             class="help-inline required">Passwords do not match!</label>
-     ```
+```
 ***
 
 To enable match comparison on your fields do the following -
