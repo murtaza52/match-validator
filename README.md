@@ -9,7 +9,7 @@ rel="stylesheet">
 There is often a need for comparing the equality of input fields such as
 email address or passwords.
 
-Example in the below form -
+### Sample Form
 
 <form name="form" class="form-horizontal">
         <div class="control-group">
@@ -33,11 +33,12 @@ Example in the below form -
           </div>
         </div>
 
-**
 
-Sample code -
 
-``<form name="form">
+### Sample Code##
+
+```html
+<form name="form">
 
           <label class="control-label">User Name</label>
           <input type="text" name="user" placeholder="User Name"/>
@@ -50,8 +51,8 @@ Sample code -
 <input type="password" name="confirm_password" placeholder="Confirm Password" matcher="{'field_to_match': 'password', 'error_name': 'passMatch'}"/>
             <label ng-show="form.confirm_password.$error.passMatch"
             class="help-inline required">Passwords do not match!</label>
-     ``
-
+     ```
+***
 
 To enable match comparison on your fields do the following -
 
@@ -61,6 +62,27 @@ To enable match comparison on your fields do the following -
 3. Set name attribute on both the fields whose values are to be compared.
 3. Pass a JSON to the directive ``matcher="{'field_to_match':
 'password', 'error_name': 'passMatch'}"``
-4. The *field_to_match* represents the input field that it has to match.
+4. The **field_to_match** represents the input field that it has to match.
 5. The **error_name** represents the name of the angular error that you
-can use to check the validity of the field - `form.confirm_password.$error.passMatch`
+can use to check the validity of the field -
+`form.confirm_password.$error.passMatch`
+6. The error also reflects in the validity of the form which can be
+checked using - `form.$invalid`
+
+***
+
+### To Do -
+
+- Change the passing of JSON string to object, as that necessiates
+  eval. I am using jade which has trouble with the object notation, thus
+  the stopgap.
+
+### Credits -
+
+- This is the post that implements a similar direcitve and provided the [idea] - (http://jsfiddle.net/thomporter/UZrex/1/)
+- The google group discussion that explained the concept of [$parsers] (https://groups.google.com/d/msg/angular/cvHU-AUOP4U/wDahiSxuljIJ)
+
+
+
+
+
